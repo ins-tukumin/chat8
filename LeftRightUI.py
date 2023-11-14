@@ -184,9 +184,9 @@ chat_placeholder = st.empty()
 # 会話履歴を表示
 with chat_placeholder.container():
     for i in range(len(st.session_state.generated)):
-        message(st.session_state.past[i],is_user=True, key=str(i))
+        message(st.session_state.past[i],is_user=True, key=str(i), avatar_style="adventurer", seed="Nala")
         key_generated = str(i) + "keyg"
-        message(st.session_state.generated[i], key=str(key_generated))
+        message(st.session_state.generated[i], key=str(key_generated), avatar_style="micah")
 
 # 質問入力欄と送信ボタンを設置
 with st.container():
